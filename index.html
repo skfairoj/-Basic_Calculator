@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="./calculator.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="header">
+            <h1>CALCULATOR</h1>
+        </div>
+
+        <div class="mode-toggle">
+            <button class="mode-btn active" onclick="calculator.toggleMode('basic')">Basic</button>
+            <button class="mode-btn" onclick="calculator.toggleMode('advanced')">Advanced</button>
+        </div>
+
+        <div class="display-container">
+            <div class="display-history" id="history"></div>
+            <div class="display" id="display">0</div>
+            <div class="memory-indicator" id="memoryIndicator"></div>
+        </div>
+
+        <div class="advanced-functions" id="advancedFunctions">
+            <button class="btn btn-function tooltip" data-tooltip="Square Root" onclick="calculator.sqrt()">√</button>
+            <button class="btn btn-function tooltip" data-tooltip="Square" onclick="calculator.square()">x²</button>
+            <button class="btn btn-function tooltip" data-tooltip="Percentage" onclick="calculator.percentage()">%</button>
+            <button class="btn btn-function tooltip" data-tooltip="Reciprocal" onclick="calculator.reciprocal()">1/x</button>
+            <button class="btn btn-memory tooltip" data-tooltip="Memory Clear" onclick="calculator.memoryClear()">MC</button>
+            <button class="btn btn-memory tooltip" data-tooltip="Memory Recall" onclick="calculator.memoryRecall()">MR</button>
+            <button class="btn btn-memory tooltip" data-tooltip="Memory Add" onclick="calculator.memoryAdd()">M+</button>
+            <button class="btn btn-memory tooltip" data-tooltip="Memory Subtract" onclick="calculator.memorySubtract()">M-</button>
+        </div>
+
+        <div class="buttons">
+            <button class="btn btn-clear" onclick="calculator.clear()">AC</button>
+            <button class="btn btn-function" onclick="calculator.toggleSign()">+/-</button>
+            <button class="btn btn-function" onclick="calculator.backspace()">⌫</button>
+            <button class="btn btn-operator" onclick="calculator.setOperator('/')">÷</button>
+
+            <button class="btn" onclick="calculator.inputNumber('7')">7</button>
+            <button class="btn" onclick="calculator.inputNumber('8')">8</button>
+            <button class="btn" onclick="calculator.inputNumber('9')">9</button>
+            <button class="btn btn-operator" onclick="calculator.setOperator('*')">×</button>
+
+            <button class="btn" onclick="calculator.inputNumber('4')">4</button>
+            <button class="btn" onclick="calculator.inputNumber('5')">5</button>
+            <button class="btn" onclick="calculator.inputNumber('6')">6</button>
+            <button class="btn btn-operator" onclick="calculator.setOperator('-')">−</button>
+
+            <button class="btn" onclick="calculator.inputNumber('1')">1</button>
+            <button class="btn" onclick="calculator.inputNumber('2')">2</button>
+            <button class="btn" onclick="calculator.inputNumber('3')">3</button>
+            <button class="btn btn-operator" onclick="calculator.setOperator('+')">+</button>
+
+            <button class="btn btn-zero" onclick="calculator.inputNumber('0')">0</button>
+            <button class="btn" onclick="calculator.inputDecimal()">.</button>
+            <button class="btn btn-equals" onclick="calculator.calculate()">=</button>
+        </div>
+    </div>
+    <script src="./calculator.js"></script>
+</body>
+</html>
